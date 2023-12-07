@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Multer file upload</title>
+</head>
+
+<body style="padding:2rem;background:lightpink; display: flex;align-items: center;justify-self: center;">
+    <form style="display: flex; flex-direction: column; align-items:center; gap: 2rem ;justify-content: center;"
+        action="http://localhost:3000/" method="post" enctype="multipart/form-data">
+        <input
+            style="padding: 0.9rem 1.5rem; background: rgb(76, 209, 207,77); border:none; border-radius: 9px; font-size: large;"
+            type="file" name="image" multiple> <!--to sent multiple files write as attribute "multiple"-->
+        <input
+            style="padding: 0.9rem 1.5rem; background: rgba(76, 209, 207,77); border:none; border-radius: 9px; font-size: large;"
+            type="file" name="pdf">
+        <input
+            style="padding: 1rem 1.5rem; background: rgba(76, 209, 207,77); border:none; border-radius: 9px; font-size: large;"
+            type="submit" value="Submite file">
+    </form>
+
+    <div id="img-h">
+
+    </div>
+
+
+    <!-- <script>
+        const imgH = document.getElementById("img-h");
+
+        function fetchinh() {
+            fetch(`http://localhost:3000/`)
+                .then(res => res.json())
+                .then(data => dataPlace(data))
+        }
+        fetchinh();
+
+        function dataPlace(dats) {
+            datas.forEach(data => {
+                const img = document.createElement("img").src = data.filename
+                imgH.appendChild(img)
+            });
+        }
+
+
+    </script> -->
+</body>
+
+</html>
